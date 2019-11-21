@@ -29,7 +29,6 @@ I've tried both, and I'm still not sure which I prefer.
 ---
 ### Below here is a work in progress:
 
-
 ## Figwheel
 
 * Quirks/Issues:

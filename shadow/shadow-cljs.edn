@@ -1,0 +1,22 @@
+;; shadow-cljs configuration
+{:source-paths
+ ["src"]
+
+ :dependencies
+ [
+  [binaryage/oops "0.7.0"]
+  [cider/cider-nrepl "0.23.0-SNAPSHOT"]
+  ;;[cider/piggieback "0.4.2"]
+  [com.taoensso/timbre "4.10.0"]
+  [lilactown/hx "0.5.3"]
+  [nrepl "0.6.0"]
+  [refactor-nrepl "2.5.0-SNAPSHOT"]]
+
+ :nrepl {:middleware [refactor-nrepl.middleware/wrap-refactor]}
+
+ :builds
+ {:app
+  {:target :react-native
+   :init-fn awesome.client.main/init
+   :output-dir "react-native/target"
+   :js-options {:js-package-dirs ["react-native/node_modules"]}}}}
